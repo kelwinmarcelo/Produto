@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>PRODUTO</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="main.js" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <h1 id="titulo">CADASTRO DE PRODUTO</h1>
+    <form autocomplete="off">
+        <div>
+            <label for="nome_produto">Nome do Produto: </label>
+            <input id="nome_produto" name="nome_produto" required maxlength="25">
+        </div>
+        <div>
+            <label for="tamanho_produto">Tamanho do Produto: </label>
+            <select id="tamanho_produto" name="tamanho_produto" required>
+                <option value=""></option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+        </div>
+        <div>
+            <label for="categoria_produto">Categoria: </label>
+            <select id="categoria_produto" name="categoria_produto" required>
+                <option value=""></option>
+                <option value="SHORT">SHORT</option>
+                <option value="SAIA">SAIA</option>
+                <option value="CROPPED">CROPPED</option>
+                <option value="MACACÃO">MACACÃO</option>
+                <option value="CALÇA">CALÇA</option>
+                <option value="SAPATOS">SAPATOS</option>
+                <option value="BLUSA">BLUSA</option>
+                <option value="BODY">BODY</option>
+            </select>
+        </div>
+        <div>
+            <label for="fornecedor_produto">Fornecedor: </label>
+            <select id="fornecedor_produto" name="fornecedor_produto" required>
+                <option value=""></option>
+                <option value="FORNECEDOR1">Zianel Atacado</option>
+                <option value="FORNECEDOR2">Atacadão da Roupa</option>
+                <option value="FORNECEDOR3">Destake Moda Feminina</option>
+                <option value="FORNECEDOR4">Jessy Moda Feminina</option>
+                <option value="FORNECEDOR5">Click Sophia Roupas Femininas</option>
+
+            </select>
+        </div>
+        <div id="botoes">
+            <button type="reset" id="botaoLimparProduto">Limpar</button>
+            <button type="submit" id="botaoCadastrarProduto">Salvar</button>
+        </div>
+    </form>
+    <table id="tabelaProdutos">
+        <thead id="tituloTabelaProdutos">
+            <th id="thProduto">Produto</th>
+            <th id="thTamanho">Tamanho</th>
+            <th id="thCategoria">Categoria</th>
+            <th id="thFornecedor">Fornecedor</th>
+        </thead>
+        <tbody id="listaProdutos">
+
+        </tbody>
+    </table>
+    <footer>
+        <h1 id="footer"></h1>
+    </footer>
+    <script src="main.js" />
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Cambria, Georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#titulo{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(9, 160, 112);
+  color: black;
+  box-shadow: 1px 1px 2px #333333;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(9, 160, 112);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  margin: 0.2%;
+  padding: 0.2%;
+  width: 99%;
+  background-color: rgb(240, 255, 250);
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+}
+
+
+#nome_produto {
+  border-radius: 4px;
+  margin-left: 1px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+  background: #edffff;
+  font-weight: bold;
+  border: 1px solid #000000;
+  width: 100%;
+  cursor: text;
+}
+
+#tamanho_produto,
+#categoria_produto,
+#fornecedor_produto {
+  border-radius: 4px;
+  margin-left: 1px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+  background: #edffff;
+  font-weight: bold;
+  border: 1px solid #000000;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+#botoes {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0.3%;
+  justify-content: flex-start;
+}
+
+#botaoCadastrarProduto {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  margin-top: 0.7%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+  background: #edffff;
+  font-weight: bold;
+  margin-left: 10%;
+  width: 140px;
+  border: 1px solid #000000;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+#botaoLimparProduto {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  margin-top: 0.7%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+  background: #d8dada;
+  font-weight: bold;
+  border: 1px solid #000000;
+  width: 140px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+
+#botaoLimparProduto:hover {
+  box-shadow: 0 0 8px var(--cor0);
+  background-color: #a65d5d;
+  font-weight: bold;
+  color: white;
+}
+
+#botaoCadastrarProduto:hover {
+  box-shadow: 0 0 8px var(--cor0);
+  background-color: #007b04;
+  font-weight: bold;
+  color: white;
+}
+
+/*ABAIXO A TABELA  */
+
+#tabelaProdutos {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+#tituloTabelaProdutos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(162, 223, 204);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+#tituloTabelaProdutos th {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#listaProdutos {
+  display: flex;
+  flex-direction: column;
+}
+
+#listaProdutos td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#thProduto {
+  width: 500px;
+}
+
+#tdProduto {
+  width: 500px;
+  color: blue;
+}
+
+#thTamanho {
+  width: 30px;
+  font-weight: bold;
+}
+
+#tdTamanho {
+  width: 30px;
+  color: blue;
+}
+
+#thCategoria {
+  width: 30px;
+  font-weight: bold;
+}
+
+#tdCategoria {
+  width: 30px;
+  color: blue;
+}
+
+#thFornecedor {
+  width: 30px;
+  font-weight: bold;
+}
+
+#tdFornecedor {
+  width: 30px;
+  color: blue;
+}
+
+/* DESCONSIDERAR O CÓDIGO ABAIXO */
+
+menu {
+  display: none;
+}
+
+span#menuBurger {
+  background-color: rgb(65, 63, 63);
+  color: white;
+  display: block;
+  text-align: start;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+span#menuBurger:hover {
+  background-color: rgb(214, 214, 214);
+  color: black;
+  transition: 0.1s ease-in-out;
+}
