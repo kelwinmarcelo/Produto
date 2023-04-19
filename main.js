@@ -1,3 +1,4 @@
+console.log("produtos");
 // CRIANDO VARIÁVEIS PARA OS ELEMENTOS DO FORMULÁRIO
 const form = document.querySelector('form');
 const nomeProduto = document.querySelector('input[name="nome_produto"]');
@@ -11,6 +12,20 @@ nomeProduto.value = '';
 tamanhoProduto.value = '';
 categoriaProduto.value = '';
 fornecedorProduto.value = '';
+
+// Exibir produtos na tela
+function exibirProdutos() {
+    let html = '';
+    for (const produto of produtos) {
+        html += `<tr id="linha">
+        <td class="colunas" id="colunaProduto">${produto.nome}</td>
+        <td class="colunas" id="colunaTamanho">${produto.tamanho}</td>
+        <td class="colunas" id="colunaCategoria">${produto.categoria}</td>
+        <td class="colunas" id="colunaFornecedor">${produto.fornecedor}</td>
+        </tr>`;
+    }
+    listaProdutos.innerHTML = html;
+}
 
 // ADICIONANDO EVENTO DE SUBMISSÃO NO FORMULÁRIO
 form.addEventListener('submit', function (event) {
@@ -38,18 +53,36 @@ form.addEventListener('submit', function (event) {
     categoriaProduto.value = '';
     fornecedorProduto.value = '';
 
-    // Exibir produtos na tela
-    let html = '';
-    for (const produto of produtos) {
-        html += `<tr>
-        <td id="tdProduto">${produto.nome}</td>
-        <td id="tdTamanho">${produto.tamanho}</td>
-        <td id="tdCategoria">${produto.categoria}</td>
-        <td id="tdFornecedor">${produto.fornecedor}</td>
-        </tr>`;
-    }
-    listaProdutos.innerHTML = html;
+    // EXIBINDO PRODUTOS NA TELA
+    exibirProdutos();
 });
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
 
 // EXIBINDO O ARRAY DE PRODUTOS NO CONSOLE
 console.log(produtos);
+

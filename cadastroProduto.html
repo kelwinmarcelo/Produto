@@ -12,7 +12,18 @@
 </head>
 
 <body>
-    <h1 id="titulo">CADASTRO DE PRODUTO</h1>
+    <h1 id="titulo">
+        <ul class="menu">
+            <li><a class="menuItem">Categorias</a></li>
+            <li><a class="menuItem">Fornecedores</a></li>
+            <li><a class="menuItem">Sobre</a></li>
+            <li><a class="menuItem">Contato</a></li>
+          </ul>
+          <button class="hamburger">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button>
+        CADASTRO DE PRODUTO</h1>
     <form autocomplete="off">
         <div>
             <label for="nome_produto">Nome do Produto: </label>
@@ -46,11 +57,11 @@
             <label for="fornecedor_produto">Fornecedor: </label>
             <select id="fornecedor_produto" name="fornecedor_produto" required>
                 <option value=""></option>
-                <option value="FORNECEDOR1">Zianel Atacado</option>
-                <option value="FORNECEDOR2">Atacadão da Roupa</option>
-                <option value="FORNECEDOR3">Destake Moda Feminina</option>
-                <option value="FORNECEDOR4">Jessy Moda Feminina</option>
-                <option value="FORNECEDOR5">Click Sophia Roupas Femininas</option>
+                <option value="Zianel Atacado">Zianel Atacado</option>
+                <option value="Atacadão da Roupa">Atacadão da Roupa</option>
+                <option value="Destake Moda Feminina">Destake Moda Feminina</option>
+                <option value="Jessy Moda Feminina">Jessy Moda Feminina</option>
+                <option value="Click Sophia Roupas Femininas">Click Sophia Roupas Femininas</option>
 
             </select>
         </div>
@@ -60,14 +71,19 @@
         </div>
     </form>
     <table id="tabelaProdutos">
-        <thead id="tituloTabelaProdutos">
-            <th id="thProduto">Produto</th>
-            <th id="thTamanho">Tamanho</th>
-            <th id="thCategoria">Categoria</th>
-            <th id="thFornecedor">Fornecedor</th>
+        <thead id="linha">
+            <th class="colunas" id="colunaProduto">Produto</th>
+            <th class="colunas" id="colunaTamanho">Tamanho</th>
+            <th class="colunas" id="colunaCategoria">Categoria</th>
+            <th class="colunas" id="colunaFornecedor">Fornecedor</th>
         </thead>
         <tbody id="listaProdutos">
-
+            <tr id="linha">
+                <td class="colunas" id="colunaProduto">Produto de Teste</td>
+                <td class="colunas" id="colunaTamanho">P</td>
+                <td class="colunas" id="colunaCategoria">CAMISETA</td>
+                <td class="colunas" id="colunaFornecedor">Fornecedor de teste</td>
+            </tr>
         </tbody>
     </table>
     <footer>

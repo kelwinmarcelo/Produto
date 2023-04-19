@@ -9,7 +9,7 @@ html {
   padding: 0;
 }
 
-#titulo{
+#titulo {
   display: flex;
   justify-content: center;
   background-color: rgb(9, 160, 112);
@@ -21,13 +21,9 @@ html {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 25px;
   background-color: rgb(9, 160, 112);
   color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body form {
@@ -147,95 +143,92 @@ body form {
 /*ABAIXO A TABELA  */
 
 #tabelaProdutos {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
   border-collapse: collapse;
+  box-shadow: 1px 1px 2px #333333;
+  -moz-box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+
 }
 
-#tituloTabelaProdutos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: rgb(162, 223, 204);
-  color: black;
-  font-weight: bold;
-  text-align: center;
-}
+#tabelaProdutos {
+  background-color: rgb(197 235 217);
+  margin: 0.2%;
+  padding: 0.2%;
 
-#tituloTabelaProdutos th {
-  padding: 10px;
-  border: 1px solid black;
 }
 
 #listaProdutos {
-  display: flex;
-  flex-direction: column;
+  background-color: white;
 }
 
-#listaProdutos td {
-  padding: 10px;
+.colunas {
   border: 1px solid black;
-  border-collapse: collapse;
+  padding: 10px;
 }
 
-#thProduto {
-  width: 500px;
+#colunaProduto {
+  width: 20%;
 }
 
-#tdProduto {
-  width: 500px;
-  color: blue;
+#colunaTamanho {
+  width: 5%;
+  text-align: center;
 }
 
-#thTamanho {
-  width: 30px;
-  font-weight: bold;
+#colunaCategoria {
+  width: 5%;
+  text-align: center;
 }
 
-#tdTamanho {
-  width: 30px;
-  color: blue;
-}
-
-#thCategoria {
-  width: 30px;
-  font-weight: bold;
-}
-
-#tdCategoria {
-  width: 30px;
-  color: blue;
-}
-
-#thFornecedor {
-  width: 30px;
-  font-weight: bold;
-}
-
-#tdFornecedor {
-  width: 30px;
-  color: blue;
+#colunaFornecedor {
+  width: 20%;
 }
 
 /* DESCONSIDERAR O CÓDIGO ABAIXO */
 
-menu {
+.menuItem {
+  display: block;
+  margin: 2rem 3rem;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 0.001rem;
+  left: 0.5rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
   display: none;
 }
 
-span#menuBurger {
-  background-color: rgb(65, 63, 63);
+.menu {
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 2;
+  bottom: 0;
+  z-index: 99;
+  background: #1a342a;
   color: white;
-  display: block;
-  text-align: start;
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
+  list-style: none;
+  padding-top: 2rem;
 }
 
-span#menuBurger:hover {
-  background-color: rgb(214, 214, 214);
-  color: black;
-  transition: 0.1s ease-in-out;
+.showMenu {
+  transform: translateX(0);
+  box-shadow: 0 0 1700px rgb(0 0 0);
 }
