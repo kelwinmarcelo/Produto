@@ -24,6 +24,11 @@ html {
   height: 25px;
   background-color: rgb(9, 160, 112);
   color: white;
+  font-size: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
 }
 
 body form {
@@ -186,7 +191,7 @@ body form {
 
 /* DESCONSIDERAR O CÓDIGO ABAIXO */
 
-.menuItem {
+.listaMenu {
   display: block;
   margin: 2rem 3rem;
   font-size: 1.2rem;
@@ -194,11 +199,11 @@ body form {
   text-decoration: none;
 }
 
-.menuItem:hover {
+.listaMenu:hover {
   text-decoration: underline;
 }
 
-.hamburger {
+.hamburguer {
   position: fixed;
   z-index: 100;
   top: 0.001rem;
@@ -209,7 +214,7 @@ body form {
   cursor: pointer;
 }
 
-.closeIcon {
+.fecharIcone {
   display: none;
 }
 
@@ -228,7 +233,30 @@ body form {
   padding-top: 2rem;
 }
 
-.showMenu {
+.mostrarMenu {
   transform: translateX(0);
   box-shadow: 0 0 1700px rgb(0 0 0);
+}
+
+#sobre {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0.2%;
+  padding: 0.2%;
+  width: 99%;
+  background-color: rgb(240, 255, 250);
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 1px 1px 2px #333333;
+  -webkit-box-shadow: 1px 1px 2px #333333;
+}
+
+#versao{
+  text-align: center;
 }
