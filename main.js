@@ -1,5 +1,5 @@
 console.log("produtos");
-// CRIANDO VARIÁVEIS PARA OS ELEMENTOS DO FORMULÁRIO
+// criando variáveis para os elemtentos do form
 const form = document.querySelector('form');
 const nomeProduto = document.querySelector('input[name="nome_produto"]');
 const tamanhoProduto = document.querySelector('select[name="tamanho_produto"]');
@@ -13,7 +13,7 @@ tamanhoProduto.value = '';
 categoriaProduto.value = '';
 fornecedorProduto.value = '';
 
-// Exibir produtos na tela
+// exibir produtos na tela
 function exibirProdutos() {
     let html = '';
     for (const produto of produtos) {
@@ -27,17 +27,17 @@ function exibirProdutos() {
     listaProdutos.innerHTML = html;
 }
 
-// ADICIONANDO EVENTO DE SUBMISSÃO NO FORMULÁRIO
+//adicionando o evento de submit no formulario
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // VERIFICANDO SE TODOS OS CAMPOS FORAM PREENCHIDOS
+    // verifica se foi preenchido
     if (nomeProduto.value.trim() === '' || tamanhoProduto.value === '' || categoriaProduto.value === '') {
         alert('Preencha todos os campos obrigatórios!');
         return;
     }
 
-    // CRIANDO OBJETO DO PRODUTO
+    // Criar obj do produto
     const produto = {
         nome: nomeProduto.value,
         tamanho: tamanhoProduto.value,
@@ -45,7 +45,7 @@ form.addEventListener('submit', function (event) {
         fornecedor: fornecedorProduto.value
     };
 
-    // ADICIONANDO PRODUTO AO ARRAY E LIMPANDO CAMPOS DO FORMULÁRIO
+    //adc o produto ao array e limpando campos do formulario 
     produtos.push(produto);
     alert('Produto cadastrado!');
     nomeProduto.value = '';
@@ -53,11 +53,8 @@ form.addEventListener('submit', function (event) {
     categoriaProduto.value = '';
     fornecedorProduto.value = '';
 
-    // EXIBINDO PRODUTOS NA TELA
+    // exibir prod na tela
     exibirProdutos();
 });
-
-
-// EXIBINDO O ARRAY DE PRODUTOS NO CONSOLE
 console.log(produtos);
 

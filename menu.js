@@ -1,4 +1,4 @@
-//MENU hamburguer
+//Menu Hamburguer
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".listaMenu");
 const hamburguer= document.querySelector(".hamburguer");
